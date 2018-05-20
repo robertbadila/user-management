@@ -9,7 +9,18 @@ class NewUser extends Component {
   }
 
   handleSubmit(e){
+    const name = document.querySelector('#name').value;
+    const id = document.querySelector('#user-id').value;
+    const work = document.querySelector('#work').value;
+    
     e.preventDefault(); 
+    db.collection('users').add({
+      name:name,
+      user_id:id,
+      work:work,
+    })
+    
+    this.props.history.push('/');
   }
 
 

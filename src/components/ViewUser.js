@@ -27,7 +27,6 @@ class ViewUser extends Component {
           const user = this.state.user;
           user.push(data);
           this.setState({user:user})
-          console.log(this.state.user);
         }
       })
     })
